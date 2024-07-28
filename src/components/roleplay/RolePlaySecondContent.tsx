@@ -72,7 +72,7 @@ const NewPlayerShowCaseList = () =>{
                     <p className={`${notoSansThai.className} text-sm tablet:text-sm s-desktop:text-sm m-desktop:text-lg l-desktop:text-lg text-white z-10 text-right whitespace-nowrap `}>{item.detail1}</p>
                     <p className={`${notoSansThai.className}  text-sm tablet:text-sm s-desktop:text-sm m-desktop:text-lg l-desktop:text-lg text-white z-10 text-right whitespace-nowrap`}>{item.detail2}</p>
 
-                    <div className={'w-full h-16 tablet:h-16 s-desktop:h-20 m-desktop:h-24 l-desktop:h-24 flex gap-3 mt-3 items-center justify-end'}>
+                    <div className={'w-full h-16 tablet:h-16 s-desktop:h-20 m-desktop:h-24 l-desktop:h-24 flex gap-3 items-center justify-end p-1'}>
 
                         {
                             item.items.map((item,index) => (

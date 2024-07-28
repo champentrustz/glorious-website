@@ -13,10 +13,11 @@ const RolePlaySystems = () => {
     return (
         <div className={'w-full h-auto  overflow-auto flex flex-col justify-center items-center relative'}>
 
-            <div className={'w-full h-[35vh] overflow-hidden relative flex justify-center items-center bg-black'}>
+            <div
+                className={'w-full h-[35vh] overflow-hidden relative flex justify-center items-end tablet:items-end s-desktop:items-center m-desktop:items-center l-desktop:items-center bg-black py-10'}>
                 <img className={'w-full h-full object-cover absolute inset-0 m-auto opacity-70'}
                      src={'/images/town-wallpaper-6.jpg'}/>
-                <p className={`text-4xl text-white text-shadow-md z-10 ${notoSansThai.className}`}>ระบบภายในเมือง</p>
+                <p className={`text-2xl tablet:text-2xl s-desktop:text-3xl m-desktop:text-4xl l-desktop:text-4xl text-white text-shadow-md z-10 ${notoSansThai.className}`}>ระบบภายในเมือง</p>
             </div>
             <div className={'w-full h-[80vh] flex justify-center items-center gap-10 px-2 py-10 overflow-hidden'}>
 
