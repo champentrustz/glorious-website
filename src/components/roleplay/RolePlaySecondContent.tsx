@@ -43,7 +43,7 @@ const NewPlayerShowCaseList = () =>{
             easing: 'easeInQuad',
             translateY: [1000, 0],
             opacity: [0, 1.0],
-            duration: 300,
+            duration: 700,
             delay: function (element, index) {
                 return index * 100
             },

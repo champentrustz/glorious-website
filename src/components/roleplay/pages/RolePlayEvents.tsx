@@ -1,8 +1,24 @@
 import CitizenEventSchedule from "@/components/roleplay/CitizenEventSchedule";
 import GangEventSchedule from "@/components/roleplay/GangEventSchedule";
 import {bebas, notoSansThai, spaceArmor} from "@/app/font";
+import {useEffect, useRef} from "react";
+import {element} from "prop-types";
+import anime from "animejs/lib/anime.es";
 
 const RolePlayEvents = () => {
+
+    const eventRef = useRef<any>([]);
+
+    useEffect(() => {
+        anime({
+            targets: eventRef.current,
+            easing: 'easeInQuad',
+            opacity: [0, 1.0],
+            duration: 500,
+        })
+    },[])
+
+
     return (
         <div className={'w-full h-auto  overflow-auto flex flex-col gap-10 justify-center items-center relative'}>
 
@@ -20,7 +36,7 @@ const RolePlayEvents = () => {
 
                     <div
                         className={'h-60 w-full tablet:w-full s-desktop:w-5/6 m-desktop:w-5/6 l-desktop:w-5/6 hidden tablet:hidden s-desktop:flex m-desktop:flex l-desktop:flex justify-center items-center gap-6 overflow-auto overscroll-x-none'}>
-                        <div className={'h-full rounded-md overflow-hidden relative'}>
+                        <div ref={(element: any) => eventRef.current[0] = element} className={'h-full rounded-md overflow-hidden relative'}>
                             <img className={`object-cover h-full `}
                                  src={`/images/roleplay/events/airdrop-event-1.png`}/>
                             <div
@@ -29,7 +45,7 @@ const RolePlayEvents = () => {
                             </div>
                         </div>
 
-                        <div className={'h-full rounded-md overflow-hidden relative'}>
+                        <div ref={(element: any) => eventRef.current[1] = element} className={'h-full rounded-md overflow-hidden relative'}>
                             <img className={`object-cover h-full `}
                                  src={`/images/roleplay/events/team-battle-event-1.png`}/>
                             <div
@@ -38,7 +54,7 @@ const RolePlayEvents = () => {
                             </div>
                         </div>
 
-                        <div className={'h-full rounded-md overflow-hidden relative'}>
+                        <div ref={(element: any) => eventRef.current[2] = element} className={'h-full rounded-md overflow-hidden relative'}>
                             <img className={`object-cover h-full `}
                                  src={`/images/roleplay/events/flag-war-event-1.png`}/>
                             <div
