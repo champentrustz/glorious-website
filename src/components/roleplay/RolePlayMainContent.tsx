@@ -1,8 +1,30 @@
 import {bebas, notoSansThai, roboto, robotoBold} from "@/app/font";
 import FooterSocial from "@/components/layout/FooterSocial";
 import CharacterImg from "@/components/home/CharacterImg";
+import {useEffect, useRef} from "react";
+import anime from "animejs/lib/anime.es";
 
 const RolePlayMainContent = () => {
+
+    const ref1 = useRef<HTMLDivElement | null>(null);
+    const ref2 = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        anime({
+            targets: ref1.current,
+            easing: 'easeInQuad',
+            opacity: [0, 1.0],
+            duration: 700,
+        })
+
+        anime({
+            targets: ref2.current,
+            easing: 'easeInQuad',
+            opacity: [0, 1.0],
+            duration: 700,
+        })
+    },[])
+
     return (
         <div
             className='w-full bg-neutral-900 h-screen tablet:h-[70vh] s-desktop:h-[70vh] m-desktop:h-[70vh] l-desktop:h-[70vh] shrink-0 overflow-hidden flex justify-center items-center relative'>
@@ -15,7 +37,7 @@ const RolePlayMainContent = () => {
 
             <div className='w-full h-full flex items-center justify-center absolute inset-0 m-auto pt-[170px]'>
 
-                <div className={'h-full w-[950px] left-0 hidden tablet:hidden s-desktop:hidden m-desktop:block l-desktop:block p-10 shrink-0'}>
+                <div ref={ref1} className={'h-full w-[950px] left-0 hidden tablet:hidden s-desktop:hidden m-desktop:block l-desktop:block p-10 shrink-0'}>
                     <div className={'rounded-xl w-full h-full shadow-md shadow-black flex flex-col border border-white/10'}>
                         <div className={'w-full h-3/5 flex '}>
                             <img className={'w-3/6 h-full rounded-tl-xl'} src={'images/roleplay/promote/main-1.jpg'}/>
@@ -29,7 +51,7 @@ const RolePlayMainContent = () => {
                     </div>
                 </div>
 
-                <div className={'h-full grow flex flex-col gap-2 justify-center items-center relative'}>
+                <div ref={ref2} className={'h-full grow flex flex-col gap-2 justify-center items-center relative'}>
                     <div
                         className={` ${bebas.className} text-4xl text-center tablet:text-5xl s-desktop:text-5xl m-desktop:text-5xl l-desktop:text-7xl text-white text-shadow-md z-10 whitespace-nowrap`}>GLORIOUS <span
                         className='text-amber-400'>X</span> ROLEPLAY

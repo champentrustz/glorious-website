@@ -2,6 +2,8 @@ import {bebas, notoSansThai, robotoBold, spaceArmor} from "@/app/font";
 import FooterSocial from "@/components/layout/FooterSocial";
 import CharacterImg from "@/components/home/CharacterImg";
 import {adminList} from "@/data/adminList";
+import {useEffect, useRef} from "react";
+import anime from "animejs/lib/anime.es";
 
 const newPlayerDetail = [
     {
@@ -31,12 +33,30 @@ const newPlayerDetail = [
 ]
 
 const NewPlayerShowCaseList = () =>{
+
+    const promoteRef = useRef<any>([])
+
+    useEffect(() => {
+        const refFilter = promoteRef.current.filter((e: any) => e !== null)
+        anime({
+            targets: refFilter,
+            easing: 'easeInQuad',
+            translateY: [1000, 0],
+            opacity: [0, 1.0],
+            duration: 300,
+            delay: function (element, index) {
+                return index * 100
+            },
+        })
+    },[])
+
     return(
         <>
             {newPlayerDetail.map((item,index) => (
                 <div
+                    ref={(element: any) => promoteRef.current[index] = element}
                     key={`new-player-${index}`}
-                    className={`h-52 tablet:h-52 s-desktop:h-56 m-desktop:h-64 l-desktop:h-64 shrink-0 
+                    className={`opacity-0 h-52 tablet:h-52 s-desktop:h-56 m-desktop:h-64 l-desktop:h-64 shrink-0 
                     flex flex-col items-end gap-2 relative p-4 rounded-lg shadow-md shadow-black border border-white/10 
                     overflow-hidden bg-neutral-900 text-shadow-md hover:scale-105 duration-300`}>
 
