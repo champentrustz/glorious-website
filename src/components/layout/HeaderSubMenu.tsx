@@ -5,7 +5,7 @@ import Link from "next/link";
 import {useEffect, useRef} from "react";
 import anime from "animejs/lib/anime.es";
 import {rolePlayMenus} from "@/data/rolePlayMenus";
-import {useParams, usePathname} from "next/navigation";
+import {useParams} from "next/navigation";
 
 
 type HeaderSubMenuProps = {
@@ -41,10 +41,8 @@ const HeaderSubMenu = ({showSubMenu} : HeaderSubMenuProps) => {
 
     const params = useParams<{sideId: string ,pageId: string}>();
 
-    const pathname = usePathname()
 
     return (
-        pathname !== '/' &&
         <>
         <div className={'w-full flex justify-center items-center  bg-neutral-950 '}>
             <div

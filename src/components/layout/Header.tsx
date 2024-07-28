@@ -43,7 +43,7 @@ const Header = () => {
                 className='w-full shrink-0 gap-4 grid grid-cols-1 tablet:grid-cols-3 s-desktop:grid-cols-3 m-desktop:grid-cols-3 l-desktop:grid-cols-3  px-4 py-6 bg-black bg-opacity-90 backdrop-blur-sm overflow-hidden'
                 style={{zIndex: 999}}>
 
-                <button
+                {pathname !== '/' && <button
                     onClick={() => setShowSubMenu(!showSubMenu)}
                     className={'h-8 aspect-square rounded bg-gray-300 absolute top-2 right-2 z-10 flex justify-center items-center tablet:flex s-desktop:hidden m-desktop:hidden l-desktop:hidden'}>
                     {!showSubMenu ? (
@@ -59,7 +59,8 @@ const Header = () => {
                     )}
 
 
-                </button>
+                </button>}
+
 
                 <HeaderLeftMenu/>
                 <HeaderTitle/>
