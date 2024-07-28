@@ -33,7 +33,7 @@ const Header = () => {
 
     const pathname = usePathname()
     const [showSubMenu, setShowSubMenu] = useState(true)
-
+    console.log(pathname)
     return (
 
         <div className={'w-full flex flex-col fixed overflow-hidden z-40'}>
