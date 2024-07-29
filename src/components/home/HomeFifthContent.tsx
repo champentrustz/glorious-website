@@ -54,13 +54,13 @@ const HomeFifthContent = () => {
     return (
         <div
             ref={viewportRef}
-            className='w-full h-[60vh] tablet:h-[70vh] s-desktop:h-[100vh] m-desktop:h-[100vh] l-desktop:h-[100vh] shrink-0 relative overflow-hidden flex flex-col gap-2 p-2 tablet:p-2 s-desktop:p-4 m-desktop:p-10 l-desktop:p-10'>
+            className='w-full h-[60vh] tablet:h-[70vh] s-desktop:h-[100vh] m-desktop:h-[100vh] l-desktop:h-[100vh] shrink-0 relative overflow-hidden flex flex-col items-end gap-2 p-2 tablet:p-2 s-desktop:p-4 m-desktop:p-10 l-desktop:p-10'>
 
             <img
                 className={'w-1/5 tablet:w-1/5 s-desktop:w-1/6 m-desktop:w-1/6 l-desktop:w-1/6 object-cover absolute right-0 bottom-0 drop-shadow z-50'}
                 src={'/images/admins/admin-nook-back.png'} alt=''/>
 
-            <p className={`${bebas.className} text-5xl tablet:text-6xl s-desktop:text-7xl m-desktop:text-8xl l-desktop:text-8xl text-neutral-700 opacity-30`}>SYSTEM
+            <p className={`${bebas.className} text-5xl tablet:text-5xl s-desktop:text-5xl m-desktop:text-8xl l-desktop:text-8xl text-neutral-700 opacity-30`}>SYSTEM
                 SHOWCASE</p>
 
             <div

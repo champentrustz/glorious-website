@@ -7,7 +7,7 @@ const HomeMainContent = () => {
 
     return (
         <div
-            className='w-full bg-black h-screen tablet:h-[75vh] s-desktop:h-[75vh] m-desktop:h-[75vh] l-desktop:h-[75vh] shrink-0 overflow-hidden flex justify-center items-center relative'>
+            className='w-full bg-black h-screen tablet:h-[75vh] s-desktop:h-[80vh] m-desktop:h-[75vh] l-desktop:h-[75vh] shrink-0 overflow-hidden flex justify-center items-center relative'>
             <video className='opacity-70 absolute inset-0 m-auto w-full h-full object-cover' autoPlay loop
                    muted>
                 <source src="/videos/intro.mp4" type="video/mp4"/>

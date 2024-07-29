@@ -6,7 +6,7 @@ const HomeSecondContent = () => {
 
 
     return (
-        <div className='w-full relative h-auto tablet:h-auto s-desktop:h-[25vh] m-desktop:h-[25vh] l-desktop:h-[25vh]
+        <div className='w-full relative h-auto tablet:h-auto s-desktop:h-auto m-desktop:h-[25vh] l-desktop:h-[25vh]
         grid grid-cols-1 pt-4 overflow-hidden'>
 
 
@@ -43,7 +43,7 @@ const HomeSecondContent = () => {
                                 className='w-full h-full flex flex-col justify-center gap-1 z-10  border border-white/20 p-2 rounded-lg'>
                                 <p className={`text-xl tablet:text-2xl s-desktop:text-2xl m-desktop:text-2xl l-desktop:text-2xl text-amber-400 z-10 ${bebas.className}`}>OUR
                                     SERVERS</p>
-                                <p className={`text-xs tablet:text-sm s-desktop:text-sm m-desktop:text-sm l-desktop:text-sm text-gray-300 z-10  ${notoSansThai.className}`}>ปัจจุบัน
+                                <p className={`text-xs tablet:text-xs s-desktop:text-xs m-desktop:text-sm l-desktop:text-sm text-gray-300 z-10  ${notoSansThai.className}`}>ปัจจุบัน
                                     Glorious มี Server
                                     ให้เล่นอยู่ด้วยกันอยู่ 2
                                     Server ได้แก่ Roleplay ซึ่งจะเน้นไปที่การสวมบทบาท และ Training ที่จะเป็น Server
@@ -56,7 +56,7 @@ const HomeSecondContent = () => {
                         <div
                             className='shrink-0 h-full z-20 px-2 flex items-center justify-end  absolute left-0'>
                             <img
-                                className='h-40 tablet:h-48 s-desktop:h-60 m-desktop:h-64 l-desktop:h-64 object-cover drop-shadow relative'
+                                className='h-40 tablet:h-48 s-desktop:h-48 m-desktop:h-64 l-desktop:h-64 object-cover drop-shadow relative'
                                 src='/images/admins/admin-kuad-2.png' alt='c-1'/>
 
                         </div>
@@ -70,7 +70,7 @@ const HomeSecondContent = () => {
                         <div
                             className='shrink-0 h-full z-20 px-2 flex items-center justify-end absolute right-0'>
                             <img
-                                className='h-40 tablet:h-44 s-desktop:h-56 m-desktop:h-60 l-desktop:h-60 object-cover drop-shadow relative'
+                                className='h-40 tablet:h-44 s-desktop:h-44 m-desktop:h-60 l-desktop:h-60 object-cover drop-shadow relative'
                                 src='/images/admins/admin-ioun-2.png' alt='c-2'/>
 
                         </div>
@@ -80,7 +80,7 @@ const HomeSecondContent = () => {
                                 className='w-full h-full flex flex-col justify-center gap-1  z-10  border border-white/20 p-2 rounded-lg'>
                                 <p className={`text-xl tablet:text-2xl s-desktop:text-2xl m-desktop:text-2xl l-desktop:text-2xl text-amber-400 z-10 ${bebas.className}`}>
                                     OUR VISION</p>
-                                <p className={`text-xs tablet:text-sm s-desktop:text-sm m-desktop:text-sm l-desktop:text-sm text-gray-300 z-10 ${notoSansThai.className}`}>
+                                <p className={`text-xs tablet:text-xs s-desktop:text-xs m-desktop:text-sm l-desktop:text-sm text-gray-300 z-10 ${notoSansThai.className}`}>
                                     Glorious เมืองแห่งความทุ่มเท เรามุ่งสร้างเมืองที่มีคุณภาพ การอัพเดทที่สม่ำเสมอ
                                     และใส่ใจผู้เล่น เพื่อที่จะให้ผู้เล่นได้สัมผัสประสบการณ์ใหม่ๆ
                                     เล่นในเมืองได้อย่างสนุกและมีความสุข</p>

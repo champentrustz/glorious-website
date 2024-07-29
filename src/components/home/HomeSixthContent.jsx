@@ -145,7 +145,7 @@ const HomeSixthContent = () => {
                 <div className={'w-full h-full flex justify-center items-center flex-col gap-6 relative p-2'}>
 
                     <div
-                        className={` py-2 absolute top-6 left-6 flex items-center ${spaceArmor.className} text-xl tablet:text-2xl s-desktop:text-2xl m-desktop:text-3xl l-desktop:text-4xl z-30 px-4 text-white border-l-8 border-amber-400`}>GLORIOUS
+                        className={` py-2 absolute hidden tablet:hidden s-desktop:hidden m-desktop:flex l-desktop:flex top-6 left-6  items-center ${spaceArmor.className} text-xl tablet:text-xl s-desktop:text-xl m-desktop:text-3xl l-desktop:text-4xl z-30 px-4 text-white border-l-8 border-amber-400`}>GLORIOUS
                         TEAM
                     </div>
 
@@ -154,7 +154,7 @@ const HomeSixthContent = () => {
                         {
                             adminList[currentIndex] && splitName(adminList[currentIndex].label).map((e, index) => (
                                 <div
-                                    className={` z-50 drop-shadow text-2xl tablet:text-3xl s-desktop:text-5xl m-desktop:text-6xl l-desktop:text-7xl ${spaceMonkey.className} text-amber-400 z-10 `}
+                                    className={` z-50 drop-shadow text-2xl tablet:text-3xl s-desktop:text-3xl m-desktop:text-6xl l-desktop:text-7xl ${spaceMonkey.className} text-amber-400 z-10 `}
                                     ref={(element) => adminNameRef.current[index] = element}
                                     key={`admin-showcase-name-${index}`}>{e === ' ' ? <div>&nbsp;</div> : e}</div>
                             ))
@@ -163,10 +163,10 @@ const HomeSixthContent = () => {
                     </div>
 
                     <p ref={positionRef}
-                       className={`z-50 text-xl tablet:text-xl s-desktop:text-2xl m-desktop:text-4xl l-desktop:text-4xl ${azonix.className} text-white z-10 opacity-0`}>glorious {adminList[currentIndex].type}</p>
+                       className={`z-50 text-xl tablet:text-xl s-desktop:text-xl m-desktop:text-4xl l-desktop:text-4xl ${azonix.className} text-white z-10 opacity-0`}>glorious {adminList[currentIndex].type}</p>
 
                     <div
-                        className={'h-60 tablet:h-96 s-desktop:h-96 m-desktop:h-2/6 l-desktop:h-2/5 gap-4 grid grid-cols-3 w-[280px] tablet:w-[450px] s-desktop:w-[480px] m-desktop:w-[580px] mt-10 l-desktop:w-[580px] shrink-0'}>
+                        className={'h-60 tablet:h-72 s-desktop:h-72 m-desktop:h-2/6 l-desktop:h-2/5 gap-4 grid grid-cols-3 w-[280px] tablet:w-[450px] s-desktop:w-[450px] m-desktop:w-[580px] mt-10 l-desktop:w-[580px] shrink-0'}>
                         <CharacterCard setCurrentIndex={setCurrentIndex} characterCardRef={characterCardRef}
                                        currentIndex={currentIndex} shouldAnimate={shouldAnimate}/>
                     </div>
