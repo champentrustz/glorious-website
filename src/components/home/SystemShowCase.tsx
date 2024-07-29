@@ -146,7 +146,7 @@ const SystemShowCase = ({showCase}: SystemShowCaseProps) => {
     return (
 
         showCase !== '' &&
-        <div className={'w-full h-full flex flex-col gap-4 justify-center'}>
+        <div className={'w-full h-full flex flex-col gap-4'}>
 
 
             <div className={`flex justify-center items-center ${bebas.className}`}>
@@ -160,7 +160,7 @@ const SystemShowCase = ({showCase}: SystemShowCaseProps) => {
                 }
             </div>
 
-            <div className='w-full h-48 tablet:h-48 s-desktop:h-48 m-desktop:h-80 l-desktop:h-80 flex justify-center items-center  shrink-0 relative'>
+            <div className='w-full h-40 tablet:h-40 s-desktop:h-40 m-desktop:h-80 l-desktop:h-80 flex justify-center items-center  shrink-0 relative'>
                 <img ref={mainImgRef} className='w-full object-cover rounded-lg z-20'
                      src={`/images/roleplay/systems/${systemDetail.name}-1.png`}/>
                 <img ref={secondImgRef}

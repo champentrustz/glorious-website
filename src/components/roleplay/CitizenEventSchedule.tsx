@@ -18,13 +18,13 @@ const CitizenEventSchedule = () => {
 
             <div className={` h-full w-[1200px] tablet:w-[1200px] s-desktop:w-full m-desktop:w-full l-desktop:w-full overflow-hidden grid grid-cols-8 gap-0.5 ${notoSansThai.className} `}>
                 <div
-                    className={`bg-amber-400 flex justify-center items-center text-neutral-900 ${bebas.className}`}>EVENTS
+                    className={`bg-amber-400 min-h-10 flex justify-center items-center text-neutral-900 ${bebas.className}`}>EVENTS
                 </div>
 
                 {
                     eventDays.map(day => (
                         <div key={`event-day-${day.day}`}
-                             className={'bg-neutral-900 flex justify-center items-center text-gray-400 text-sm'}>{day.label}</div>
+                             className={'bg-neutral-900 flex min-h-10 justify-center items-center text-gray-400 text-sm'}>{day.label}</div>
                     ))
                 }
 

@@ -53,14 +53,15 @@ const RolePlayMainContent = () => {
 
                 <div ref={ref2} className={'h-full grow flex flex-col gap-2 justify-center items-center relative'}>
                     <div
-                        className={` ${bebas.className} text-4xl text-center tablet:text-5xl s-desktop:text-5xl m-desktop:text-5xl l-desktop:text-7xl text-white text-shadow-md z-10 whitespace-nowrap`}>GLORIOUS <span
+                        className={` ${bebas.className} text-center text-4xl  tablet:text-4xl s-desktop:text-4xl m-desktop:text-5xl l-desktop:text-7xl text-white text-shadow-md z-10 whitespace-nowrap`}>GLORIOUS <span
                         className='text-amber-400'>X</span> ROLEPLAY
                     </div>
-                    <p className={`${notoSansThai.className} text-base text-center tablet:text-base s-desktop:text-xl m-desktop:text-xl l-desktop:text-xl text-white`}>ประเทศมั่นคง ระบบอัพเดททุกเดือน
+                    <p className={`${notoSansThai.className} text-base text-center tablet:text-base s-desktop:text-base m-desktop:text-xl l-desktop:text-xl text-white`}>ประเทศมั่นคง ระบบอัพเดททุกเดือน
                         สังคมคุณภาพกับฐานผู้เล่นกว่า 600</p>
-                    <p className={`${notoSansThai.className} text-base text-center tablet:text-base s-desktop:text-xl m-desktop:text-xl l-desktop:text-xl text-white`}>มาลองสัมผัสความสนุกด้วยตัวคุณเอง</p>
+                    <p className={`${notoSansThai.className} text-base text-center tablet:text-base s-desktop:text-base m-desktop:text-xl l-desktop:text-xl text-white`}>มาลองสัมผัสความสนุกด้วยตัวคุณเอง</p>
                     <div
-                        className={`${bebas.className} text-4xl text-neutral-900 px-3 py-1 bg-amber-400 rounded shadow-md shadow-black border border-white/10 mt-10`}>FREE
+                        className={`${bebas.className} text-2xl tablet:text-2xl s-desktop:text-2xl m-desktop:text-4xl l-desktop:text-4xl text-neutral-900 px-3 py-1 bg-amber-400 rounded shadow-md shadow-black border border-white/10
+                          mt-4 tablet:mt-4 s-desktop:mt-4 m-desktop:mt-8 l-desktop:mt-10`}>FREE
                         WHITELIST
                     </div>
 

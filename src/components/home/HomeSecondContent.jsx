@@ -6,7 +6,7 @@ const HomeSecondContent = () => {
 
 
     return (
-        <div className='w-full relative h-auto tablet:h-auto s-desktop:h-auto m-desktop:h-[25vh] l-desktop:h-[25vh]
+        <div className='w-full relative h-auto tablet:h-auto s-desktop:min-h-[20vh] m-desktop:h-[25vh] l-desktop:h-[25vh]
         grid grid-cols-1 pt-4 overflow-hidden'>
 
 

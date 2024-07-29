@@ -60,14 +60,14 @@ const HomeFifthContent = () => {
                 className={'w-1/5 tablet:w-1/5 s-desktop:w-1/6 m-desktop:w-1/6 l-desktop:w-1/6 object-cover absolute right-0 bottom-0 drop-shadow z-50'}
                 src={'/images/admins/admin-nook-back.png'} alt=''/>
 
-            <p className={`${bebas.className} text-5xl tablet:text-5xl s-desktop:text-5xl m-desktop:text-8xl l-desktop:text-8xl text-neutral-700 opacity-30`}>SYSTEM
+            <p className={`${bebas.className} text-5xl tablet:text-5xl absolute top-0 right-4 s-desktop:text-5xl m-desktop:text-8xl l-desktop:text-8xl text-neutral-700 opacity-30`}>SYSTEM
                 SHOWCASE</p>
 
             <div
-                className='w-full h-full flex justify-center tablet:justify-center s-desktop:justify-end m-desktop:justify-end l-desktop:justify-end items-center z-10 relative'>
+                className='w-full pt-10 h-full flex justify-center tablet:justify-center s-desktop:justify-end m-desktop:justify-end l-desktop:justify-end items-center z-10 relative'>
                 <div
                     className='z-50 hidden tablet:hidden s-desktop:flex m-desktop:flex l-desktop:flex  s-desktop:w-3/12 m-desktop:w-3/12 l-desktop:w-1/6  h-full justify-center items-center absolute left-0 p-2'>
-                    <div className='w-full h-full '>
+                    <div className='w-full h-full'>
                         <SystemShowCase showCase={showCase}/>
                     </div>
 
@@ -79,7 +79,7 @@ const HomeFifthContent = () => {
                         <SystemShowCaseList setShowCase={setShowCase} showCase={showCase}
                                             shouldRenderSystemList={shouldRenderSystemList}/>
                         <img
-                            className='h-4/6 tablet:h-4/6 s-desktop:h-4/6 m-desktop:h-4/5 l-desktop:h-5/6 object-cover drop-shadow z-0'
+                            className='h-3/5 tablet:h-3/5 s-desktop:h-3/5 m-desktop:h-4/5 l-desktop:h-5/6 object-cover drop-shadow z-0'
                             src='/images/map-gtav-main.png'
                         />
                     </div>

@@ -37,7 +37,7 @@ export const getEventTimeList = (time: string, color: string, loopData: []) =>{
     let dayElement: any[] = []
     let colElement: any[] = []
     let timeElement: any[] = [
-        (<div key={`time-${time}`} className={`${notoSansThai.className} text-gray-400 text-sm bg-neutral-900 flex justify-center items-center`}>{time}</div>)
+        (<div key={`time-${time}`} className={`${notoSansThai.className} text-gray-400 text-sm bg-neutral-900 flex justify-center items-center min-h-10`}>{time}</div>)
     ]
     eventDays.map(day => {
 
@@ -65,7 +65,7 @@ export const getEventTimeList = (time: string, color: string, loopData: []) =>{
 
 
         html = [...html,
-            (<div key={`${day.day}-${time}`} className={`flex flex-col justify-center items-center ${color} ${notoSansThai.className} text-xs text-white gap-1`}>{dayElement}</div>)
+            (<div key={`${day.day}-${time}`} className={`flex flex-col justify-center items-center ${color} ${notoSansThai.className} text-xs text-white`}>{dayElement}</div>)
 
         ]
         dayElement = []

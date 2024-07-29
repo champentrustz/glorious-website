@@ -7,7 +7,7 @@ const RolePlayEvents = () => {
         <div className={'w-full h-auto  overflow-auto flex flex-col gap-10 justify-center items-center relative'}>
 
             <div
-                className={'w-full h-[35vh] overflow-hidden relative flex justify-center items-end tablet:items-end s-desktop:items-center m-desktop:items-center l-desktop:items-center bg-black py-10'}>
+                className={'w-full h-[35vh] overflow-hidden relative flex justify-center items-end tablet:items-end s-desktop:items-end m-desktop:items-center l-desktop:items-center bg-black py-10'}>
                 <img className={'w-full h-full object-cover absolute inset-0 m-auto opacity-70'}
                      src={'/images/town-wallpaper-8.jpg'}/>
                 <p className={`text-2xl tablet:text-2xl s-desktop:text-3xl m-desktop:text-4xl l-desktop:text-4xl text-white text-shadow-md z-10 ${notoSansThai.className}`}>ตารางกิจกรรมภายในเมือง</p>
@@ -21,7 +21,7 @@ const RolePlayEvents = () => {
                     className={`bg-white shadow-md w-full tablet:w-full s-desktop:w-full m-desktop:w-4/5 l-desktop:w-3/5 h-full p-10 gap-16 flex flex-col justify-center items-center overflow-hidden`}>
 
                     <div
-                        className={'h-60 w-full tablet:w-full s-desktop:w-5/6 m-desktop:w-5/6 l-desktop:w-5/6 hidden tablet:hidden s-desktop:flex m-desktop:flex l-desktop:flex justify-center items-center gap-6 overflow-auto overscroll-x-none'}>
+                        className={'h-60 w-full tablet:w-full s-desktop:w-full m-desktop:w-5/6 l-desktop:w-5/6 hidden tablet:hidden s-desktop:flex m-desktop:flex l-desktop:flex justify-center items-center gap-6 overflow-auto overscroll-x-none'}>
                         <div className={'h-full rounded-md overflow-hidden relative'}>
                             <img className={`object-cover h-full `}
                                  src={`/images/roleplay/events/airdrop-event-1.png`}/>
@@ -52,7 +52,7 @@ const RolePlayEvents = () => {
 
                     </div>
 
-                    <div className={'w-full h-[80vh] z-20 flex flex-col gap-4 overflow-auto'}>
+                    <div className={'w-full min-h-[80vh] z-20 flex flex-col gap-4 overflow-auto'}>
                         <p className={`${spaceArmor.className} text-xl text-neutral-800`}>CITIZEN EVENT</p>
                         <div className={'w-full h-full overflow-auto pb-2'}>
                             <CitizenEventSchedule/>
@@ -63,7 +63,7 @@ const RolePlayEvents = () => {
                         </div>
 
                     </div>
-                    <div className={'w-full h-[30vh] z-20 flex flex-col gap-4 overflow-auto'}>
+                    <div className={'w-full min-h-[30vh] z-20 flex flex-col gap-4 overflow-auto'}>
                         <p className={`${spaceArmor.className} text-xl text-neutral-800`}>GANG EVENT</p>
                         <div className={'w-full h-full overflow-auto pb-2'}>
                             <GangEventSchedule/>

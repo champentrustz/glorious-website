@@ -44,7 +44,7 @@ const HeaderSubMenu = ({showSubMenu} : HeaderSubMenuProps) => {
 
     return (
         <>
-        <div className={'w-full flex justify-center items-center  bg-neutral-950 '}>
+        <div className={'w-full flex justify-center items-center  bg-neutral-950 z-0'}>
             <div
                 className={'w-3/5 p-2 hidden tablet:hidden s-desktop:grid-cols-5 m-desktop:grid-cols-5 l-desktop:grid-cols-5 s-desktop:grid m-desktop:grid l-desktop:grid gap-4'}>
 
@@ -62,7 +62,7 @@ const HeaderSubMenu = ({showSubMenu} : HeaderSubMenuProps) => {
 
             </div>
         </div>
-    <div ref={menuRef} className={'w-full flex justify-center items-center  bg-neutral-950 '}>
+    <div ref={menuRef} className={'w-full flex justify-center items-center  bg-neutral-950 z-0'}>
         <div
             className={'w-3/5 p-2 grid grid-cols-1 tablet:grid-cols-1 s-desktop:hidden m-desktop:hidden l-desktop:hidden  gap-4'}>
 

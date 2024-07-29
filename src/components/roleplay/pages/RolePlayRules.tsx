@@ -7,7 +7,7 @@ const RolePlayRules = () => {
         <div className={'w-full h-auto  overflow-auto flex flex-col justify-center items-center relative'}>
 
             <div
-                className={'w-full h-[35vh] overflow-hidden relative flex justify-center items-end tablet:items-end s-desktop:items-center m-desktop:items-center l-desktop:items-center bg-black py-10'}>
+                className={'w-full h-[35vh] overflow-hidden relative flex justify-center items-end tablet:items-end s-desktop:items-end m-desktop:items-center l-desktop:items-center bg-black py-10'}>
                 <img className={'w-full h-full object-cover absolute inset-0 m-auto opacity-70'}
                      src={'/images/town-wallpaper-4.jpg'}/>
                 <p className={`text-2xl tablet:text-2xl s-desktop:text-3xl m-desktop:text-4xl l-desktop:text-4xl text-white text-shadow-md z-10 ${notoSansThai.className}`}>กฏภายในเมือง</p>
@@ -21,7 +21,7 @@ const RolePlayRules = () => {
 
 
                     <div className={`w-full h-[80vh] p-4 gap-10 flex flex-col justify-center items-center `}>
-                        <p className={` ${notoSansThai.className} text-2xl text-neutral-800 flex gap-6`}>
+                        <p className={` ${notoSansThai.className} text-lg tablet:text-lg s-desktop:text-lg m-desktop:text-2xl l-desktop:text-2xl text-neutral-800 flex gap-6`}>
                             กฏการเล่นพื้นฐาน
 
                             <Link href={'https://docs.google.com/spreadsheets/d/1MyxcPQ5PMpuf7Rq91-kqdG0OqhthJkOx9UjXcghPi48/edit?gid=0#gid=0'} target="_blank"
@@ -34,7 +34,7 @@ const RolePlayRules = () => {
                     </div>
 
                     <div className={`w-full h-[80vh] p-4 gap-10 flex flex-col justify-center items-center  `}>
-                        <p className={` ${notoSansThai.className} text-2xl text-neutral-800 flex gap-6`}>
+                        <p className={` ${notoSansThai.className} text-lg tablet:text-lg s-desktop:text-lg m-desktop:text-2xl l-desktop:text-2xl text-neutral-800 flex gap-6`}>
                             กฏการเล่น STORY
 
                             <Link
