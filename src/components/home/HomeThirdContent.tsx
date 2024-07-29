@@ -7,6 +7,7 @@ import useInViewPort from "@/hooks/useInViewPort";
 import useZoomValue from "@/hooks/useZoomValue";
 import useScrollPosition from "@/hooks/useScrollPosition";
 import useIsScrollUp from "@/hooks/useIsScrollUp";
+import Link from "next/link";
 
 const HomeThirdContent = () => {
 
@@ -58,9 +59,10 @@ const HomeThirdContent = () => {
                         มาลองสัมผัสประสบการณ์ใหม่ด้วยตัวคุณเอง</p>
 
                     <div className='w-full h-20 flex justify-center items-center'>
-                        <button
+                        <Link
+                            href={'/roleplay'}
                             className={`h-10 w-20 tablet:w-20 s-desktop:w-24 m-desktop:w-28 l-desktop:w-28  border-2 border-white/30 hover:bg-gray-500 hover:bg-opacity-20 flex justify-center items-center text-white text-xs tablet:text-sm s-desktop:text-sm m-desktop:text-base l-desktop:text-base ${notoSansThai.className}`}>ดูเพิ่มเติม
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
