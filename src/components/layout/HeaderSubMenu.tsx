@@ -2,10 +2,11 @@
 
 import {notoSansThai} from "@/app/font";
 import Link from "next/link";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import anime from "animejs/lib/anime.es";
 import {rolePlayMenus} from "@/data/rolePlayMenus";
 import {useParams} from "next/navigation";
+import {trainingMenus} from "@/data/trainingMenus";
 
 
 type HeaderSubMenuProps = {
@@ -15,6 +16,9 @@ type HeaderSubMenuProps = {
 const HeaderSubMenu = ({showSubMenu} : HeaderSubMenuProps) => {
 
     const menuRef = useRef<HTMLDivElement>(null)
+    const [subMenuList, setSubMenuList] = useState<any>([])
+    const params = useParams<{sideId: string ,pageId: string}>();
+
 
 
     const animateShowSubMenu = () =>{
@@ -36,10 +40,18 @@ const HeaderSubMenu = ({showSubMenu} : HeaderSubMenuProps) => {
     }
 
     useEffect(() => {
+        if(params.sideId === 'training'){
+            setSubMenuList(trainingMenus)
+        }else if(params.sideId === 'roleplay'){
+            setSubMenuList(rolePlayMenus)
+        }
+    }, [params]);
+
+    useEffect(() => {
         animateShowSubMenu()
     },[showSubMenu])
 
-    const params = useParams<{sideId: string ,pageId: string}>();
+
 
 
     return (
@@ -49,11 +61,11 @@ const HeaderSubMenu = ({showSubMenu} : HeaderSubMenuProps) => {
                 className={'w-3/5 p-2 hidden tablet:hidden s-desktop:grid-cols-5 m-desktop:grid-cols-5 l-desktop:grid-cols-5 s-desktop:grid m-desktop:grid l-desktop:grid gap-4'}>
 
                 {
-                    rolePlayMenus.map((menu) => (
+                    subMenuList && subMenuList.map((menu: any) => (
                         <Link
                             key={`sub-menu-${menu.name}`}
                             href={menu.url}
-                            className={`flex text-xs tablet:text-xs s-desktop:text-xs m-desktop:text-base l-desktop:text-base items-center justify-center ${params.pageId === menu.name ? 'text-amber-300' : 'text-gray-300'} hover:text-amber-400 p-2 whitespace-nowrap ${notoSansThai.className}`}>
+                            className={`${params.sideId === 'training' && 'col-span-5'} flex text-xs tablet:text-xs s-desktop:text-xs m-desktop:text-base l-desktop:text-base items-center justify-center ${params.pageId === menu.name ? 'text-amber-300' : 'text-gray-300'} hover:text-amber-400 p-2 whitespace-nowrap ${notoSansThai.className}`}>
                             {menu.label}
                         </Link>
                     ))
@@ -67,7 +79,7 @@ const HeaderSubMenu = ({showSubMenu} : HeaderSubMenuProps) => {
             className={'w-3/5 p-2 grid grid-cols-1 tablet:grid-cols-1 s-desktop:hidden m-desktop:hidden l-desktop:hidden  gap-4'}>
 
             {
-                rolePlayMenus.map((menu) => (
+                subMenuList && subMenuList.map((menu: any) => (
                     <Link
                         key={`sub-menu-${menu.name}`}
                         href={menu.url}

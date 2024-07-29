@@ -29,7 +29,7 @@ const RolePlayJobs = () => {
                         <div className={'w-full h-full flex justify-between'}>
 
                             <div
-                                className={'h-full w-4/12 hidden tablet:hidden s-desktop:hidden m-desktop:flex l-desktop:flex flex-col gap-6 p-10'}>
+                                className={'w-4/12 hidden tablet:hidden s-desktop:hidden m-desktop:flex l-desktop:flex flex-col gap-6 p-10'}>
                                 <JobDetail currentJob={currentJob}/>
 
                             </div>
@@ -49,7 +49,7 @@ const RolePlayJobs = () => {
                         </div>
 
                         <div
-                            className={` hidden  tablet:hidden s-desktop:hidden m-desktop:flex l-desktop:flex w-[1200px] absolute inset-0 m-auto h-full justify-center items-center z-20 `}>
+                            className={` hidden  tablet:hidden s-desktop:hidden m-desktop:flex l-desktop:flex w-[1200px] absolute inset-0 m-auto h-full justify-center items-center z-10 `}>
 
                             <JobList currentJob={currentJob} setCurrentJob={setCurrentJob}/>
                         </div>

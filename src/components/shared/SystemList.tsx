@@ -3,14 +3,19 @@ import {bebas, notoSansThai, spaceArmor, spaceMonkey} from "@/app/font";
 
 interface SystemListProps {
     setShowSystem?: (value: (((prevState: string) => string) | string)) => void,
-    showSystem?: string
+    showSystem?: string,
+    systemData?: {
+        name: string,
+        label: string,
+        detail: string
+    }[]
 }
 
-const SystemList = ({setShowSystem, showSystem}: SystemListProps) => {
+const SystemList = ({setShowSystem, showSystem, systemData}: SystemListProps) => {
     return (
         <>
             {
-                rolePlaySystemData.map((system, index) => (
+                systemData && systemData.map((system, index) => (
                     <button
                         key={`system-list-${index}`}
                         onClick={() => setShowSystem && setShowSystem(system.name)}
@@ -19,13 +24,13 @@ const SystemList = ({setShowSystem, showSystem}: SystemListProps) => {
                         <div className={'w-full h-3/5 flex overflow-hidden rounded'}>
 
                             <img className='h-full rounded-sm shrink-0'
-                                 src={`/images/roleplay/systems/${system.name}-1.png`}/>
+                                 src={`/images/systems/${system.name}-1.png`}/>
 
                             <div className={'w-full h-full grid grid-cols-1 gap-1 px-2 content-start'}>
                                 <img className='rounded-sm'
-                                     src={`/images/roleplay/systems/${system.name}-2.png`}/>
+                                     src={`/images/systems/${system.name}-2.png`}/>
                                 <img className='rounded-sm'
-                                     src={`/images/roleplay/systems/${system.name}-3.png`}/>
+                                     src={`/images/systems/${system.name}-3.png`}/>
                             </div>
                         </div>
 

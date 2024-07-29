@@ -2,18 +2,21 @@ import {bebas, notoSansThai, spaceArmor} from "@/app/font";
 import {splitName} from "@/modules/splitName";
 import {useEffect, useRef, useState} from "react";
 import anime from "animejs/lib/anime.es";
-import {rolePlayJobsData} from "@/data/rolePlayJobsData";
-import {rolePlaySystemData} from "@/data/rolePlaySystemData";
 
 interface SystemDetailProps {
-    showSystem?: string
+    showSystem?: string,
+    systemData?: {
+        name: string,
+        label: string,
+        detail: string
+    }[]
 }
 
-const SystemDetail = ({showSystem}: SystemDetailProps) => {
+const SystemDetail = ({showSystem, systemData}: SystemDetailProps) => {
 
     const titleRef = useRef<any>([])
     const detailRef = useRef<any>(null);
-    const systemDetail: any = rolePlaySystemData.find(system => system.name === showSystem);
+    const systemDetail: any = systemData && systemData.find((system) => system.name === showSystem);
     const [currentImg, setCurrentImg] = useState<number>(1);
 
     useEffect(() => {
@@ -61,20 +64,20 @@ const SystemDetail = ({showSystem}: SystemDetailProps) => {
                     <div className={`w-3/6 tablet:w-3/6 s-desktop:w-3/6 m-desktop:w-4/5 l-desktop:w-5/6 
                 h-40  tablet:h-40 s-desktop:h-40 m-desktop:h-80 l-desktop:h-96 shrink-0  overflow-hidden flex items-center`}>
                         <img className='h-full object-cover rounded-lg'
-                             src={`/images/roleplay/systems/${systemDetail.name}-${currentImg}.png`}/>
+                             src={`/images/systems/${systemDetail.name}-${currentImg}.png`}/>
                     </div>
 
                     <div
                         className={'w-full h-20  tablet:h-20 s-desktop:h-20 m-desktop:h-28 l-desktop:h-28 grid grid-cols-7 items-center gap-2 shrink-0'}>
                         <img onClick={() => setCurrentImg(1)}
                              className={`object-cover rounded-md ${currentImg !== 1 ? 'opacity-50  h-5/6' : 'h-full'} cursor-pointer duration-300`}
-                             src={`/images/roleplay/systems/${systemDetail.name}-1.png`}/>
+                             src={`/images/systems/${systemDetail.name}-1.png`}/>
                         <img onClick={() => setCurrentImg(2)}
                              className={`object-cover cursor-pointer ${currentImg !== 2 ? 'opacity-50 h-5/6' : 'h-full'} rounded-md duration-300`}
-                             src={`/images/roleplay/systems/${systemDetail.name}-2.png`}/>
+                             src={`/images/systems/${systemDetail.name}-2.png`}/>
                         <img onClick={() => setCurrentImg(3)}
                              className={`object-cover cursor-pointer ${currentImg !== 3 ? 'opacity-50 h-5/6' : 'h-full'} rounded-md duration-300`}
-                             src={`/images/roleplay/systems/${systemDetail.name}-3.png`}/>
+                             src={`/images/systems/${systemDetail.name}-3.png`}/>
                     </div>
                 </div>
 

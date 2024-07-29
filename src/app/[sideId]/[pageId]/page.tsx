@@ -7,6 +7,7 @@ import RolePlayEvents from "@/components/roleplay/pages/RolePlayEvents";
 import RolePlayRules from "@/components/roleplay/pages/RolePlayRules";
 import RolePlaySystems from "@/components/roleplay/pages/RolePlaySystems";
 import RolePlayJobs from "@/components/roleplay/pages/RolePlayJobs";
+import TrainingSystems from "@/components/training/pages/TrainingSystems";
 
 type Props = {}
 
@@ -24,6 +25,8 @@ const renderRpPage = (pageId: string) => {
             return <RolePlaySystems/>;
         case 'rp-jobs':
             return <RolePlayJobs/>;
+        case 'tn-systems':
+            return <TrainingSystems/>;
         default:
             return <NotFound/>;
     }

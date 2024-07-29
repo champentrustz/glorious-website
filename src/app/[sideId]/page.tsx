@@ -6,6 +6,7 @@ import RolePlayThirdContent from "@/components/roleplay/RolePlayThirdContent";
 import RolePlayFourthContent from "@/components/roleplay/RolePlayFourthContent";
 import {useParams} from "next/navigation";
 import NotFound from "@/components/roleplay/pages/NotFound";
+import TrainingMainContent from "@/components/training/TrainingMainContent";
 
 type Props = {}
 
@@ -23,6 +24,7 @@ const RolePlaySide = () =>{
 const TrainingSide = () =>{
     return(
         <>
+            <TrainingMainContent/>
         </>
     )
 }

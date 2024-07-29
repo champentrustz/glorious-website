@@ -3,12 +3,11 @@ import {useState} from "react";
 import {rolePlaySystemData} from "@/data/rolePlaySystemData";
 import SystemDetail from "@/components/shared/SystemDetail";
 import SystemList from "@/components/shared/SystemList";
+import {trainingSystemData} from "@/data/trainingSystemData";
 
-const RolePlaySystems = () => {
+const TrainingSystems = () => {
 
-    const [showSystem, setShowSystem] = useState(rolePlaySystemData[0].name);
-
-
+    const [showSystem, setShowSystem] = useState(trainingSystemData[0].name);
 
     return (
         <div className={'w-full h-auto  overflow-auto flex flex-col justify-center items-center relative'}>
@@ -26,7 +25,7 @@ const RolePlaySystems = () => {
                 <div
                     className={'col-span-4 flex flex-col justify-center items-center bg-white shadow-md'}>
                     <div className={`w-full h-full p-4 gap-10 flex  justify-center items-center overflow-hidden z-20`}>
-                        <SystemDetail showSystem={showSystem} systemData={rolePlaySystemData}/>
+                        <SystemDetail showSystem={showSystem} systemData={trainingSystemData}/>
                     </div>
                 </div>
 
@@ -42,7 +41,7 @@ const RolePlaySystems = () => {
                     </div>
 
                     <div className={'w-full h-[350px] tablet:h-[400px] s-desktop:h-full m-desktop:h-full l-desktop:h-full flex flex-col items-end px-2 gap-4 content-start overflow-auto'}>
-                        <SystemList setShowSystem={setShowSystem} showSystem={showSystem} systemData={rolePlaySystemData}/>
+                        <SystemList setShowSystem={setShowSystem} showSystem={showSystem} systemData={trainingSystemData}/>
 
                     </div>
 
@@ -59,4 +58,4 @@ const RolePlaySystems = () => {
     );
 };
 
-export default RolePlaySystems;
+export default TrainingSystems;

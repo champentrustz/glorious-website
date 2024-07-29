@@ -53,8 +53,8 @@ const JobDetail = ({currentJob}: JobDetailProps) => {
             </div>
             <div
                 ref={detailRef}
-                className={'flex flex-col gap-4 opacity-0 w-full justify-center '}>
-                <div className={'flex w-3/6 gap-2 bg-neutral-900 rounded-md overflow-hidden p-2'}>
+                className={'flex flex-col gap-4 opacity-0 w-full justify-center z-20'}>
+                <div className={'flex w-4/6 gap-2 bg-neutral-900 rounded-md overflow-hidden p-2'}>
                     <div
                         className={'h-14 shrink-0 bg-red-8 rounded-sm bg-neutral-800 flex justify-center items-center aspect-square overflow-hidden'}>
                         <img className={'h-3/6 aspect-square'} src={`/images/roleplay/jobs/${jobDetail.name}.png`}/>
