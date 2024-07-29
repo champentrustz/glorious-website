@@ -40,6 +40,10 @@ const JobListMobile = ({currentJob}: JobListMobileProps) => {
                 </div>
 
                 <div
+                    className={`h-full w-56 shrink-0 aspect-square bg-neutral-900 flex justify-center items-center text-gray-400 ${notoSansThai.className} overflow-auto`}>ไอเทมแรร์
+                </div>
+
+                <div
                     className={`h-full w-56 shrink-0 aspect-square bg-neutral-900 flex justify-center items-center text-gray-400 ${notoSansThai.className} overflow-auto`}>คราฟ
                 </div>
             </div>
@@ -66,22 +70,22 @@ const JobListMobile = ({currentJob}: JobListMobileProps) => {
                         <div
                             className={`h-full w-56 shrink-0 aspect-square bg-neutral-900 flex justify-center items-center text-gray-300 ${notoSansThai.className} overflow-auto`}>
                             {
-                                job.required_items.length ?
+                                job.required_items.length > 0 ?
 
-                                        <div className={'w-full h-5/6 flex  gap-2 p-2'}>
-                                            {
-                                                job.required_items.map((item: any) => (
+                                    <div className={'w-full h-5/6 flex  gap-2 p-2'}>
+                                        {
+                                            job.required_items.map((item: any) => (
+                                                <div
+                                                    key={`${job.name}-item-required-${item.name}-mobile`}
+                                                    className={'h-full aspect-square rounded-md bg-neutral-900 flex flex-col justify-center items-center relative overflow-hidden border border-white/20'}>
+                                                    <img className={'h-4/6 aspect-square'}
+                                                         src={`/images/roleplay/items/${item.name}.png`}/>
                                                     <div
-                                                        key={`${job.name}-item-required-${item.name}-mobile`}
-                                                        className={'h-full aspect-square rounded-md bg-neutral-900 flex flex-col justify-center items-center relative overflow-hidden border border-white/20'}>
-                                                        <img className={'h-4/6 aspect-square'}
-                                                             src={`/images/roleplay/items/${item.name}.png`}/>
-                                                        <div
-                                                            className={`flex justify-center items-center text-sm text-green-500 ${bebas.className}`}>x {item.amount}</div>
-                                                    </div>
-                                                ))
-                                            }
-                                        </div>
+                                                        className={`flex justify-center items-center text-sm text-green-500 ${bebas.className}`}>x {item.amount}</div>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
                                     : ''
                             }
                         </div>
@@ -89,7 +93,7 @@ const JobListMobile = ({currentJob}: JobListMobileProps) => {
                         <div
                             className={`h-full w-56 shrink-0 aspect-square bg-neutral-900 flex justify-center items-center text-gray-300 ${notoSansThai.className} overflow-auto`}>
                             {
-                                job.items_drop.length ?
+                                job.items_drop.length > 0 ?
 
                                     <div className={'w-full h-5/6 flex  gap-2 p-2'}>
                                         {
@@ -110,7 +114,28 @@ const JobListMobile = ({currentJob}: JobListMobileProps) => {
                         <div
                             className={`h-full w-56 shrink-0 aspect-square bg-neutral-900 flex justify-center items-center text-gray-300 ${notoSansThai.className} overflow-auto`}>
                             {
-                                job.items_craft.length ?
+                                job.rare_items.length > 0 ?
+
+                                    <div className={'w-full h-5/6 flex  gap-2 p-2'}>
+                                        {
+                                            job.rare_items.map((item: any) => (
+                                                <div
+                                                    key={`${jobDetail.name}-item-rare-${item}-mobile`}
+                                                    className={'h-full aspect-square shrink-0 rounded-md bg-neutral-900 flex flex-col justify-center items-center relative overflow-hidden border border-white/20'}>
+                                                    <img className={'h-4/6 aspect-square'}
+                                                         src={`/images/roleplay/items/${item}.png`}/>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                    : ''
+                            }
+                        </div>
+
+                        <div
+                            className={`h-full w-56 shrink-0 aspect-square bg-neutral-900 flex justify-center items-center text-gray-300 ${notoSansThai.className} overflow-auto`}>
+                            {
+                                job.items_craft.length > 0 ?
 
                                     <div className={'w-full h-5/6 flex  gap-2 p-2'}>
                                         {

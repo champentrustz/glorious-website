@@ -60,19 +60,19 @@ const JobDetail = ({currentJob}: JobDetailProps) => {
                         <img className={'h-3/6 aspect-square'} src={`/images/roleplay/jobs/${jobDetail.name}.png`}/>
                     </div>
                     <div
-                        className={'w-full h-full flex flex-col gap-1 justify-center items-center'}>
-                        <p className={`${notoSansThai.className} text-amber-400 text-lg `}>{jobDetail.label}</p>
+                        className={' h-full flex flex-col w-full gap-1 justify-center items-center'}>
+                        <p className={`${notoSansThai.className} text-amber-400 `}>{jobDetail.label}</p>
                         <p className={`${notoSansThai.className} text-white text-sm`}>ประเภท: {jobDetail.type.toUpperCase()}</p>
                     </div>
                 </div>
 
                 <div
-                    className={`px-4 h-auto py-2 w-auto border-l-4 border-amber-400 flex items-center bg-neutral-100 mt-2 text-sm ${notoSansThai.className} text-neutral-800 `}>
+                    className={`px-4 h-auto py-2 max-w-[400px] border-l-4 border-amber-400 flex items-center bg-neutral-100 mt-2 text-sm ${notoSansThai.className} text-neutral-800 `}>
                     {jobDetail.detail}
                 </div>
 
                 {
-                    jobDetail.required_items.length ?
+                    jobDetail.required_items.length > 0 ?
                     <div className={'w-full h-24 flex flex-col gap-1 shrink-0 overflow-hidden'}>
                         <p className={`${bebas.className} text-neutral-800 text-xl`}>required item</p>
                         <div className={'w-full h-full flex  gap-4 overflow-hidden'}>
@@ -92,7 +92,7 @@ const JobDetail = ({currentJob}: JobDetailProps) => {
                 }
 
                 {
-                    jobDetail.items_drop.length ?
+                    jobDetail.items_drop.length > 0 ?
                     <div className={'w-full h-24 flex flex-col gap-1 shrink-0 overflow-hidden'}>
                         <p className={`${bebas.className} text-neutral-800 text-xl`}>DROPS</p>
                         <div className={'w-4/6 h-full flex  gap-4 flex-wrap overflow-auto'}>
@@ -111,7 +111,26 @@ const JobDetail = ({currentJob}: JobDetailProps) => {
                 }
 
                 {
-                    jobDetail.items_craft.length ?
+                    jobDetail.rare_items.length > 0 ?
+                        <div className={'w-full h-24 flex flex-col gap-1 shrink-0 overflow-hidden'}>
+                            <p className={`${bebas.className} text-neutral-800 text-xl`}>RARE ITEMS</p>
+                            <div className={'w-4/6 h-full flex  gap-4 flex-wrap overflow-auto'}>
+                                {
+                                    jobDetail.rare_items.map((item: any) => (
+                                        <div
+                                            key={`${jobDetail.name}-item-rare-${item}`}
+                                            className={'h-full aspect-square rounded-md bg-neutral-900 flex justify-center items-center overflow-hidden'}>
+                                            <img className={'h-4/6 aspect-square'}
+                                                 src={`/images/roleplay/items/${item}.png`}/>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        </div> : ''
+                }
+
+                {
+                    jobDetail.items_craft.length > 0 ?
                     <div className={'w-full h-24 flex flex-col gap-1 shrink-0 overflow-hidden'}>
                         <p className={`${bebas.className} text-neutral-800 text-xl`}>CRAFT</p>
                         <div className={'w-full h-full flex  gap-4 overflow-hidden'}>
