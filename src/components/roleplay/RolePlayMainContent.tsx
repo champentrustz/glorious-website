@@ -27,7 +27,7 @@ const RolePlayMainContent = () => {
 
     return (
         <div
-            className='w-full bg-neutral-900 h-screen tablet:h-[70vh] s-desktop:h-[70vh] m-desktop:h-[70vh] l-desktop:h-[70vh] shrink-0 overflow-hidden flex justify-center items-center relative'>
+            className='w-full bg-neutral-900 h-screen tablet:h-[70vh] s-desktop:h-[80vh] m-desktop:h-[70vh] l-desktop:h-[70vh] shrink-0 overflow-hidden flex justify-center items-center relative'>
             {/*<video className=' absolute inset-0 m-auto w-full h-full object-cover' autoPlay loop*/}
             {/*    muted>*/}
             {/*    <source src="/videos/intro.mp4" type="video/mp4"/>*/}
