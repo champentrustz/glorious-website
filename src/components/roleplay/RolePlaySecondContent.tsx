@@ -17,7 +17,7 @@ const newPlayerDetail = [
     {
         name: 'new-player-items',
         label: 'ITEMS',
-        detail1: `ผู้เล่นใหม่รับอาวุธพร้อมเล่น 3 ชิ้น (ปากฉลาม, ไม้เบส, ค้อน)`,
+        detail1: `ผู้เล่นใหม่รับอาวุธ 3 ชิ้น (ปากฉลาม, ไม้เบส, ค้อน)`,
         detail2: `พร้อมรถทำงานดำแรงๆฟรี 7 วัน (Zentorno)`,
         items: ['start_day1.png', 'start_day4.png', 'start_day7.png'],
         background: `/images/zentorno-wallpaper.jpg`
@@ -25,7 +25,7 @@ const newPlayerDetail = [
     {
         name: 'new-player-code',
         label: 'CODE',
-        detail1: `ผู้เล่นใหม่เมื่อเข้าเมือง สามารถกรอกโค้ดเพื่อรับกาชาอีกเพียบ`,
+        detail1: `ผู้เล่นใหม่สามารถกรอกโค้ดเพื่อรับกาชาอีกเพียบ`,
         detail2: `สามารถติดตามโค้ดได้ใน Discord`,
         items: ['turismor_gasha.png', 'trophytruck_gasha.png', 'jester3_gasha.png'],
         background: `/images/roleplay/promote/main-3.jpg`
