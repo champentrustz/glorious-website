@@ -17,9 +17,9 @@ const RolePlaySystems = () => {
                 className={'w-full h-[35vh] overflow-hidden relative flex justify-center items-end tablet:items-end s-desktop:items-end m-desktop:items-center l-desktop:items-center bg-black py-10'}>
                 <img className={'w-full h-full object-cover absolute inset-0 m-auto opacity-70'}
                      src={'/images/town-wallpaper-6.jpg'}/>
-                <p className={`text-xl tablet:text-xl s-desktop:text-xl m-desktop:text-4xl l-desktop:text-4xl text-white text-shadow-md z-10 ${notoSansThai.className}`}>ระบบภายในเมือง</p>
+                <p className={`text-xl tablet:text-xl s-desktop:text-xl m-desktop:text-xl l-desktop:text-2xl text-white text-shadow-md z-10 ${notoSansThai.className}`}>ระบบภายในเมือง</p>
             </div>
-            <div className={`w-full tablet:w-5/6 s-desktop:w-4/5 m-desktop:w-4/6 l-desktop:w-3/5  h-auto tablet:h-auto s-desktop:h-[80vh] m-desktop:h-[80vh] l-desktop:h-[80vh] 
+            <div className={`w-full tablet:w-5/6 s-desktop:w-4/5 m-desktop:w-4/6 l-desktop:w-6/12  h-auto tablet:h-auto s-desktop:h-[80vh] m-desktop:h-[80vh] l-desktop:h-[80vh] 
             grid grid-cols-1 tablet:grid-cols-6 s-desktop:grid-cols-6 m-desktop:grid-cols-6 l-desktop:grid-cols-6 gap-6 p-10 overflow-hidden
           
             `}>

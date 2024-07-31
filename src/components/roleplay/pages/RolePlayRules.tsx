@@ -10,7 +10,7 @@ const RolePlayRules = () => {
                 className={'w-full h-[35vh] overflow-hidden relative flex justify-center items-end tablet:items-end s-desktop:items-end m-desktop:items-center l-desktop:items-center bg-black py-10'}>
                 <img className={'w-full h-full object-cover absolute inset-0 m-auto opacity-70'}
                      src={'/images/town-wallpaper-4.jpg'}/>
-                <p className={`text-xl tablet:text-xl s-desktop:text-xl m-desktop:text-4xl l-desktop:text-4xl text-white text-shadow-md z-10 ${notoSansThai.className}`}>กฏภายในเมือง</p>
+                <p className={`text-xl tablet:text-xl s-desktop:text-xl m-desktop:text-xl l-desktop:text-2xl text-white text-shadow-md z-10 ${notoSansThai.className}`}>กฏภายในเมือง</p>
             </div>
 
             <div className={'w-full h-full flex flex-col justify-center items-center px-2 py-10 overflow-hidden'}>

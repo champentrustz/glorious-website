@@ -45,13 +45,12 @@ const TrainingMainContent = () => {
 
                 </div>
 
-                <div ref={ref2} className={'h-full grow flex flex-col gap-2 justify-center items-center relative'}>
+                <div ref={ref2} className={'h-full grow flex flex-col gap-2 justify-center items-center relative px-4'}>
                     <div
                         className={` ${bebas.className} text-center text-4xl  tablet:text-4xl s-desktop:text-4xl m-desktop:text-5xl l-desktop:text-7xl text-white text-shadow-md z-10 whitespace-nowrap`}>GLORIOUS <span
                         className='text-amber-400'>X</span> TRAINING
                     </div>
-                    <p className={`${notoSansThai.className} text-base text-center tablet:text-base s-desktop:text-base m-desktop:text-xl l-desktop:text-xl text-white`}>ประเทศมั่นคง ระบบอัพเดททุกเดือน
-                        สังคมคุณภาพกับฐานผู้เล่นกว่า 600</p>
+                    <p className={`${notoSansThai.className} text-base text-center tablet:text-base s-desktop:text-base m-desktop:text-xl l-desktop:text-xl text-white`}>ระบบพร้อมทุกการซ้อม กับคอมมูนิตี้ที่หลากหลาย เทรนนิ่งที่เป็นมากกว่าเทรนนิ่ง</p>
                     <p className={`${notoSansThai.className} text-base text-center tablet:text-base s-desktop:text-base m-desktop:text-xl l-desktop:text-xl text-white`}>มาลองสัมผัสความสนุกด้วยตัวคุณเอง</p>
                     <div
                         className={`${bebas.className} text-2xl tablet:text-2xl s-desktop:text-2xl m-desktop:text-4xl l-desktop:text-4xl text-neutral-900 px-3 py-1 bg-amber-400 rounded shadow-md shadow-black border border-white/10

@@ -51,7 +51,7 @@ const RolePlayMainContent = () => {
                     </div>
                 </div>
 
-                <div ref={ref2} className={'h-full grow flex flex-col gap-2 justify-center items-center relative'}>
+                <div ref={ref2} className={'h-full grow flex flex-col gap-2 justify-center items-center relative px-4'}>
                     <div
                         className={` ${bebas.className} text-center text-4xl  tablet:text-4xl s-desktop:text-4xl m-desktop:text-5xl l-desktop:text-7xl text-white text-shadow-md z-10 whitespace-nowrap`}>GLORIOUS <span
                         className='text-amber-400'>X</span> ROLEPLAY
